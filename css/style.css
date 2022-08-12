@@ -73,12 +73,50 @@ body {
     transition: all 300ms;
 }
 
+#logo:hover{
+    border-radius: 2px;
+    color: black;
+    background-color: #ccc;
+}
+
 #logo .gear {
     display: block;
     float: left;
     font-size: 30px;
     margin-top: 8px;
     margin-left: 26px;
+    /*Animacion Logo*/
+    animation-name: rotate-gear; /*Nombramos la animacion*/
+    animation-duration: 2s; /*Velocidad animacion*/
+    animation-iteration-count: infinite; /*Animacion infinita*/
+    animation-timing-function: linear; /*Siempre tiene la misma velocidad*/
+}
+
+/*Animacion logo*/
+@keyframes rotate-gear {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/*Animacion logo*/
+#logo:hover .gear{
+    animation: fromBellow 500ms linear;
+}
+
+@keyframes fromBellow {
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
 }
 
 #logo h3{
@@ -88,6 +126,20 @@ body {
     margin-top: 5px;
     margin-right: 65px;
     transition: all 300ms;
+}
+
+/*Animacion texto*/
+#logo:hover h3{
+    animation: fromRight 300ms linear;
+}
+
+@keyframes fromRight {
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
 }
 
 #menu {
@@ -126,6 +178,20 @@ body {
     background: url('../img/bakbaner.png');
     background-position: -200px -200px;
     margin: 20px auto;
+    overflow: hidden;
+    /*Animacion banner*/
+    animation: backBanner 10s linear;
+}
+
+    /*Animacion banner*/
+@keyframes backBanner {
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -200px -200px;
+    }
+    
 }
 
 #banner h1{
@@ -139,6 +205,32 @@ body {
     margin: 27px auto;
     text-align: center;
     text-shadow: 2px 2px 1px black;
+    /*Animacion texto*/
+    animation: showText 10s linear;
+}
+
+    /*Animacion banner*/
+@keyframes showText {
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+    }
 }
 
 /*CARDS*/
