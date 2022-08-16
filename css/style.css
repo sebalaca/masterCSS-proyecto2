@@ -568,7 +568,7 @@ body {
 }   
 
 #articles article {
-    width: 100%;
+    width: 98%;
     height: auto;
     border: 1px solid #ccc;
     margin: 40px auto;
@@ -756,4 +756,11 @@ body {
 
 #footer #browsers img {
     width: 45px;
+}
+
+/*Animacion nombre Alumno*/
+.alumni:hover{
+    font-size: 18px;
+    text-decoration: underline;
+    cursor: pointer;
 }
