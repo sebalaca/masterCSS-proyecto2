@@ -176,10 +176,47 @@
 }
 
 @media (max-width: 660px){
-    #articles{
-        width: 100%;
+
+    #banner h1{
+        font-size: 25px;
     }
+    
     #lateral{
+        float: none;
         width: 100%;
+        margin: 0px auto;
+        min-height: auto;
+        margin-top: 20px;
+    }
+
+    #lateral input[type="text"] {
+        width: 93%;
+    }
+
+    #login input[type="email"], 
+    #login input[type="password"] {
+        width: 90%;
+    }
+
+    #articles{
+        float: none;
+        width: 100%;
+        margin: 0px auto;
+        min-height: auto;
+    }
+
+    #footer{
+        height: auto;
+        padding-bottom: 55px;
+    }
+
+    #footer .wrap > div{
+        width: 100%;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+
+    #footer h5{
+        font-size: 25px;
     }
 }
